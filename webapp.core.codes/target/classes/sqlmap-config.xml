@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+   
+<configuration>
+    <settings>
+        <!-- changes from the defaults -->
+        <setting name="cacheEnabled" value="false" />
+        <setting name="logImpl" value="LOG4J"/>
+        <setting name="lazyLoadingEnabled" value="false" />
+<!--         <setting name="useColumnLabel" value="true"/> -->
+    </settings> 
+	
+    <typeAliases>
+        <typeAlias type="com.java.webapp.core.codes.domain.Access" alias="Access"/>
+        <typeAlias type="com.java.webapp.core.codes.domain.RoleLevel" alias="RoleLevel"/>
+        <typeAlias type="com.java.webapp.core.codes.domain.User" alias="User"/>
+        <typeAlias type="com.java.webapp.core.codes.domain.Parameter" alias="Parameter"/>
+        <typeAlias type="com.java.webapp.core.codes.domain.Role" alias="Role"/>
+    </typeAliases>
+	
+    <mappers>
+<!-- 		<mapper resource="User.xml"></mapper> -->
+<!-- 		<mapper resource="Parameter.xml"></mapper> -->
+<!--         <mapper resource="mapping/AccessMapper.xml"></mapper> -->
+        <mapper resource="mapping/UserMapper.xml"></mapper>
+		<mapper resource="mapping/ParameterMapper.xml"></mapper>
+        <mapper resource="mapping/GenericMapper.xml"></mapper>
+<!--         <mapper resource="mapping/RoleMapper.xml"></mapper> -->
+        
+        
+    </mappers>
+</configuration>

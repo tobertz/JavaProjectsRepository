@@ -1,0 +1,42 @@
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+  
+ <tiles-definitions>
+
+    <definition name="login.definition" template="/WEB-INF/jsp/layout/loginLayout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="includes" value="/WEB-INF/jsp/includes/includes.jsp" />
+        <put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />
+        <put-attribute name="menu" value="" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/includes/footer.jsp" />
+    </definition>
+     
+     
+    <definition name="base.definition" template="/WEB-INF/jsp/layout/commonLayout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="includes" value="/WEB-INF/jsp/includes/includes.jsp" />
+        <put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />
+        <put-attribute name="menu" value="" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/includes/footer.jsp" />
+    </definition>
+	
+    <definition name="home" extends="base.definition">
+        <put-attribute name="title" value="HOME" />
+        <put-attribute name="body" value="/WEB-INF/jsp/home/home.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/menu/menu.jsp" />
+    </definition>
+    
+    
+  	<definition name="loginPage" extends="login.definition">
+        <put-attribute name="title" value="Login" />
+        <put-attribute name="body" value="/WEB-INF/jsp/login/login.jsp" />
+    </definition>
+    
+     <definition name="errorPage" extends="base.definition">
+        <put-attribute name="title" value="Error" />
+        <put-attribute name="body" value="/WEB-INF/jsp/exception/error.jsp" />
+    </definition>
+ </tiles-definitions>
